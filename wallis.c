@@ -1,3 +1,5 @@
+
+
 #include <assert.h>
 
 #include <stdlib.h>
@@ -6,25 +8,7 @@
 
 #include <math.h>
 
-float wallis_pi(int count)
-
-{
-
-float value=1.0;
-
-for(int a=1;a<=count;a++)
-
- {
-
- float num=4*a*a;
-
- value*=num/(num-1);
-
- }
-
-return value*2;
-
-}float wallis_pi(int);
+float wallis_pi(int);
 
 int main(void) {
 
@@ -57,5 +41,25 @@ int main(void) {
     }
 
   }
+
+}
+
+float wallis_pi(int i)
+
+{
+
+  float p=1;
+
+  for(float n=1;n<=i;n++)
+
+  {
+
+    p=p*((4*n*n)/((4*n*n)-1));
+
+  }
+
+  p=2*p;
+
+  return p;
 
 }
